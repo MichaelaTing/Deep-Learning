@@ -212,7 +212,7 @@ WL = np.random.randn(WL.shape[0], WL.shape[1]) * np.sqrt(1/n)
 
 batch 梯度下降法和 Mini-batch 梯度下降法代价函数的变化趋势如下：
 
-<img title="" src="https://raw.githubusercontent.com/bighuang624/Andrew-Ng-Deep-Learning-notes/master/docs/Improving_Deep_Neural_Networks/training-with-mini-batch-gradient-descent.png" alt="training-with-mini-batch-gradient-descent" style="zoom: 50%;" width="488">
+<img title="" src="./src/training-with-mini-batch-gradient-descent.png" alt="training-with-mini-batch-gradient-descent" style="zoom: 50%;" width="488">
 
 - batch 梯度下降法：
   - 对所有 m 个训练样本执行一次梯度下降，**每一次迭代时间较长，训练过程慢**；
@@ -239,7 +239,7 @@ $$
 S_{t}= \begin{cases}Y_{1}, & t=1 \\ \beta S_{t-1}+(1-\beta) Y_{t}, & t>1\end{cases}
 $$
 
-<img src="https://raw.githubusercontent.com/bighuang624/Andrew-Ng-Deep-Learning-notes/master/docs/Improving_Deep_Neural_Networks/Exponentially-weight-average.png" alt="Exponentially-weight-average" style="zoom:67%;" />
+<img src="./src/Exponentially-weight-average.png" alt="Exponentially-weight-average" style="zoom:67%;" />
 
 给定一个时间序列，例如伦敦一年每天的气温值，图中蓝色的点代表真实数据。对于一个即时的气温值，取权重值 β 为 0.9，根据求得的值可以得到图中的红色曲线，它反映了气温变化的大致趋势。取权重值 β=0.98 时，可以得到图中更为平滑的绿色曲线。而当取权重值 β=0.5 时，得到图中噪点更多的黄色曲线。**β 越大相当于求取平均利用的天数越多**，曲线自然就会越平滑而且越滞后。
 
@@ -258,7 +258,7 @@ $$
 
 将**动量衰减参数 β 设置为 0.9** 是超参数的一个常见且效果不错的选择。当 β 被设置为 0 时，显然就成了 batch 梯度下降法。
 
-<img src="https://raw.githubusercontent.com/bighuang624/Andrew-Ng-Deep-Learning-notes/master/docs/Improving_Deep_Neural_Networks/Gradient-Descent-with-Momentum.png" alt="Gradient-Descent-with-Momentum" style="zoom:67%;" />
+<img src="./src/Gradient-Descent-with-Momentum.png" alt="Gradient-Descent-with-Momentum" style="zoom:67%;" />
 
 进行一般的梯度下降将会得到图中的蓝色曲线，由于存在上下波动，减缓了梯度下降的速度，因此只能使用一个较小的学习率进行迭代。如果用较大的学习率，结果可能会像紫色曲线一样偏离函数的范围。
 
@@ -355,7 +355,7 @@ $$
 
 对于 L 层神经网络，经过 Batch Normalization 的作用，整体流程如下：
 
-<img src="https://raw.githubusercontent.com/bighuang624/Andrew-Ng-Deep-Learning-notes/master/docs/Improving_Deep_Neural_Networks/BN.png" alt="BN" style="zoom:67%;" />
+<img src="./src/BN.png" alt="BN" style="zoom:67%;" />
 
 ### BN有效的原因
 

@@ -32,7 +32,7 @@
 1. 算法对训练集的拟合很好，可以看作可避免偏差很低；
 2. 推广到验证集和测试集效果也很好，即方差不是很大。
 
-<img title="" src="https://raw.githubusercontent.com/bighuang624/Andrew-Ng-Deep-Learning-notes/master/docs/Structuring_Machine_Learning_Projects/Human-level.png" alt="Human-level" style="zoom: 67%;" width="557">
+<img title="" src="./src/Human-level.png" alt="Human-level" style="zoom: 67%;" width="557">
 
 ## 错误分析
 
@@ -90,7 +90,7 @@ y=\left[\begin{array}{l}
 \end{array}\right]
 $$
 
-<img title="" src="https://raw.githubusercontent.com/bighuang624/Andrew-Ng-Deep-Learning-notes/master/docs/Structuring_Machine_Learning_Projects/Multi-Task-Learning.png" alt="Multi-Task-Learning" style="zoom:67%;" width="608">
+<img title="" src="./src/Multi-Task-Learning.png" alt="Multi-Task-Learning" style="zoom:67%;" width="608">
 
 多任务学习是使用单个神经网络模型来实现多个任务。实际上，也可以分别构建多个神经网络来实现。多任务学习中可能存在训练样本 Y 某些标签空白的情况，这不会影响多任务学习模型的训练。多任务学习和 Softmax 回归看上去有些类似，容易混淆。它们的区别是，Softmax 回归的输出向量 y 中只有一个元素为 1；而多任务学习的输出向量 y 中可以有多个元素为 1。
 
